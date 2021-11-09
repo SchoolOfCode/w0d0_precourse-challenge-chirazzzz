@@ -1,0 +1,221 @@
+/* ================================= 
+  Base styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.2;
+	margin: 0;
+}
+
+h2,
+span,
+ul {
+	color: #3A6A80;
+}
+
+ul {
+	list-style-type: none;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	display: block;
+}
+
+p {
+	font-size: 0.9em;
+	margin-bottom: 1em;
+}
+
+/* ================================= 
+  Base Layout styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.name {
+	font-size: 1.35em;
+	margin: 0;
+}
+
+.title {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.name a,
+.main-nav a {
+	display: block;
+	padding: 10px 15px;
+}
+
+.name a {
+	color: #9B5A51;
+}
+
+.main-nav a {
+	font-size: .95em;
+	color: #3A6A80;
+}
+
+.main-nav a:hover {
+	color: #131142;
+}
+
+/* ---- Layout Containers ---- */
+
+.main-header,
+.main-nav,
+.main-banner,
+.main-footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.main-banner,
+.main-footer {
+	background: rgba(150, 55, 48, 0.3);
+	padding: 1.5em 0;
+}
+
+.events {
+	padding: 3em 2em;
+}
+
+.row {
+	display: flex;
+	flex-direction: column;
+	padding: 0.5em;
+}
+
+.main-footer {
+	margin-top: 2.5em;
+	font-weight: bold;
+}
+/* ---- Page Elements ---- */
+
+.title {
+	margin-bottom: 0.2em;
+}
+
+.portrait {
+	max-width: 15em;
+}
+
+.plays a {
+	font-size: .95em;
+	color: #3A6A80;
+	margin-bottom: 0.2em;
+	padding: 0.3em;
+}
+
+.plays a:hover {
+	color: #131142;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 480px) {
+
+	.row {
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+
+	.col {
+		flex: 1;
+	}
+
+	.hist {
+		order: -1;
+	}
+
+	.com {
+		flex: 1.5;
+	}
+}
+
+@media (min-width: 750px) {
+	
+	.main-header,
+	.row {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.main-header {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.main-nav {
+		flex-direction: row;
+	}
+
+	.portrait {
+	max-width: 20em;
+	}
+
+	.title {
+		font-size: 1.8em;
+	}
+
+	.tagline {
+		font-size: 1.2em;
+	}
+
+	p,
+	.plays a {
+		font-size: 1em;
+	}
+}
+
+@media (min-width: 1060px) {
+
+	.main-header,
+	.row {
+		width: 80%;
+	}
+
+	.main-header,
+	.main-nav {
+		flex-direction: row;
+	}
+
+	.main-header {
+		justify-content: space-between;
+	}
+
+	.portrait {
+	max-width: 25em;
+	}
+
+	.title {
+		font-size: 2em;
+	}
+
+	.tagline {
+		font-size: 1.35em;
+	}
+
+	p,
+	.plays a {
+		font-size: 1.1em;
+	}
+}
